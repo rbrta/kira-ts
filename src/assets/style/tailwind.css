@@ -3,3 +3,44 @@
 @tailwind components;
 
 @tailwind utilities;
+
+@layer base {
+	@font-face {
+		font-family: "Inter";
+		font-weight: 400;
+		font-style: normal;
+		font-display: swap;
+		src: local("Inter-Regular"), local("Inter Regular"),
+			url("../font/Inter-Regular.woff2") format("woff2");
+	}
+
+	.base-xxl {
+		font-size: 4rem;
+		line-height: 106%;
+	}
+
+	.base-xl {
+		font-size: 3rem;
+		line-height: 108%;
+	}
+
+	.base-l {
+		font-size: 2.25rem;
+		line-height: 122%;
+	}
+
+	.base-m {
+		font-size: 2rem;
+		line-height: 125%;
+	}
+
+	.base-s {
+		font-size: 1.75rem;
+		line-height: 129%;
+	}
+
+	.base-xs {
+		font-size: 1.5rem;
+		line-height: 133%;
+	}
+}
