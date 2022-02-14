@@ -1,0 +1,32 @@
+$desktop: 1280px;
+
+// text
+@mixin base-xxl {
+	font-size: 4rem;
+	line-height: 106%;
+}
+
+@mixin base-xl {
+	font-size: 3rem;
+	line-height: 108%;
+}
+
+@mixin base-l {
+	font-size: 2.25rem;
+	line-height: 122%;
+}
+
+@mixin base-m {
+	font-size: 2rem;
+	line-height: 125%;
+}
+
+@mixin base-s {
+	font-size: 1.75rem;
+	line-height: 129%;
+}
+
+@mixin base-xs {
+	font-size: 1.5rem;
+	line-height: 133%;
+}
