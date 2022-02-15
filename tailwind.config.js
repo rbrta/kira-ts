@@ -1,6 +1,7 @@
 const colors = require("tailwindcss/colors");
 
 module.exports = {
+	mode: "jit",
 	purge: ["./public/**/*.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
 	presets: [],
 	darkMode: false, // or 'media' or 'class'
@@ -184,16 +185,13 @@ module.exports = {
 			full: "9999px",
 		},
 		borderWidth: {
-			DEFAULT: "1px",
-			0: "0px",
-			2: "2px",
-			4: "4px",
-			8: "8px",
+			DEFAULT: "0.125rem",
+			0: "0",
+			2: "0.25rem",
+			4: "0.5rem",
+			8: "1rem",
 		},
 		boxShadow: {
-			neu: "-0.125rem -0.125rem 0.375rem #FFFFFF, 0.1875rem 0.1875px 0.375rem rgba(174, 174, 192, 0.4)",
-			"neu-inset":
-				"inset -0.125rem -0.125rem 0.125rem rgba(255, 255, 255, 0.7), inset 1.875rem 1.875rem 0.125rem rgba(174, 174, 192, 0.2)",
 			none: "none",
 		},
 		caretColor: (theme) => theme("colors"),

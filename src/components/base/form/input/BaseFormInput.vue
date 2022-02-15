@@ -1,5 +1,10 @@
 <template>
-	<input :type="type" class="base-m focus:border-purple-400" @input="onInputHandler" />
+	<input
+		:type="type"
+		class="base-m p-[1.75rem] border border-gray-300 focus:border-purple-400 outline-none"
+		@input="onInputHandler"
+		:class="{ 'invalid-input': !isValid }"
+	/>
 </template>
 
 <script lang="ts">
@@ -25,7 +30,7 @@ export default defineComponent({
 		const onInputHandler = function (e: Event): void {
 			const element = e.currentTarget as HTMLInputElement;
 			const value = element.value;
-			console.log(validator(value));
+			isValidClient.value = validator(value)
 		}
 
 		const isValid = computed<boolean>(() => {
@@ -38,12 +43,3 @@ export default defineComponent({
 	},
 });
 </script>
-
-<style scoped lang="scss">
-input {
-	padding: 1.75rem;
-	border: 0.25rem solid #aaaaaa;
-	border-radius: 0.5rem;
-	outline: none;
-}
-</style>

@@ -1,4 +1,5 @@
-export default function (type = "text") {
+type CallbackFunction = (value: string) => boolean
+export default (type = "text"): CallbackFunction => {
 	switch (type) {
 		case "text": return textValidation
 		case "password": return passwordValidation
