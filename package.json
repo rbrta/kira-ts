@@ -9,7 +9,7 @@
         "test:unit": "vue-cli-service test:unit",
         "lint": "vue-cli-service lint",
         "editorconfig": "editorconfig-checker",
-        "test": "yarn run editorconfig"
+        "test": "yarn run editorconfig && yarn test:unit"
     },
     "dependencies": {
         "@commitlint/cli": "^16.1.0",
