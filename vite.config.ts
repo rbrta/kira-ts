@@ -9,6 +9,13 @@ export default defineConfig({
 		extensions: [".mjs", ".js", ".ts", ".jsx", ".tsx", ".json", ".vue"],
 		alias: {
 			"@": fileURLToPath(new URL('./src', import.meta.url))
-		}
+		},
+	},
+	css: {
+		preprocessorOptions: {
+			scss: {
+				additionalData: `@import "@/assets/style/vars.scss";`,
+			},
+		},
 	},
 });
