@@ -11,9 +11,9 @@
 	margin: 0 auto;
 	position: relative;
 
-	@media screen and (min-width: $desktop) {
-		padding: 0 7.5rem;
-	}
+	// @media screen and (min-width: $desktop) {
+	// 	padding: 0 7.5rem;
+	// }
 
 	&::v-deep & {
 		padding: 0;

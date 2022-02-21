@@ -19,7 +19,7 @@ export default defineComponent({
 <style scoped lang="scss">
 .nav-link {
 	transition: all 0.3s linear;
-	@include base-m;
+	// @include base-m;
 	&:hover {
 		text-decoration: underline;
 	}
