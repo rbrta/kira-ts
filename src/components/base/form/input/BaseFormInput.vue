@@ -1,6 +1,7 @@
 <template>
 	<input
 		:type="type"
+		:name="name"
 		:class="`base-m p-1 border rounded-sm ${isValid ? 'border-grey focus-visible:border-blue focus-visible:outline-blue' : 'border-pink focus-visible:border-red focus-visible:outline-red'}`"
 		@input="onInputHandler"
 	/>
@@ -14,6 +15,7 @@ export default defineComponent({
 	props: {
 		isValidOnServer: Boolean,
 		value: String,
+		name: String,
 		type: {
 			type: String,
 			default: "text",
@@ -39,7 +41,10 @@ export default defineComponent({
 		})
 
 		return {
-			onInputHandler, isValid
+			onInputHandler,
+			isValidOnServer,
+			isValidOnClient,
+			isValid
 		};
 	},
 });
